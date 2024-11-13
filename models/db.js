@@ -15,4 +15,8 @@ const messages = [
   },
 ];
 
-module.exports = { messages };
+const getMessageById = (id) => {
+  messages.find((message) => message.uuid === id);
+};
+
+module.exports = { messages, getMessageById };
