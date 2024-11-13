@@ -8,6 +8,6 @@ indexRouter.get('/', (req, res) => {
   res.render('index', { messages });
 });
 
-indexRouter.get('/messages/:messageId', getMessageById);
+indexRouter.get('/messages', getMessageById);
 
 module.exports = indexRouter;

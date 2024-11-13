@@ -15,7 +15,9 @@
           <li>Date: <%= message.added %></li>
           <li>Message: <%= message.text%></li>
           <li>
-            <a href="/messages/<%= message.uuid %>"><button>Open</button></a>
+            <a href="/messages?mid=<%= message.uuid %>"
+              ><button>Open</button></a
+            >
           </li>
         </ul>
       </li>

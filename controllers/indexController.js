@@ -1,8 +1,8 @@
 const db = require('../models/db');
 
 const getMessageById = (req, res) => {
-  const { messageId } = req.params;
-  const message = db.getMessageById(messageId);
+  const { mid } = req.query;
+  const message = db.getMessageById(mid);
 
   res.render('message', { message });
 };
