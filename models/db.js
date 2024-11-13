@@ -15,8 +15,8 @@ const messages = [
   },
 ];
 
-const getMessageById = (id) => {
-  messages.find((message) => message.uuid === id);
-};
+function getMessageById(id) {
+  return messages.find((message) => message.uuid === id);
+}
 
 module.exports = { messages, getMessageById };
