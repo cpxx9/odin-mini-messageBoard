@@ -14,6 +14,9 @@
           <li>User: <%= message.user %></li>
           <li>Date: <%= message.added %></li>
           <li>Message: <%= message.text%></li>
+          <li>
+            <a href="<%= message.uuid %>"><button>View message</button></a>
+          </li>
         </ul>
       </li>
       <% }); %>
