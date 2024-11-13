@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const messages = require('../models/db');
+const { messages } = require('../models/db');
 
 const indexRouter = Router();
 

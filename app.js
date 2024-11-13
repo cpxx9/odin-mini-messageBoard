@@ -1,6 +1,7 @@
 require('dotenv/config');
 const path = require('node:path');
 const express = require('express');
+const indexRouter = require('./routes/indexRouter');
 
 const { PORT } = process.env;
 
@@ -10,3 +11,9 @@ app.set('view engine', 'ejs');
 
 const assetsPath = path.join(__dirname, 'public');
 app.use(express.static(assetsPath));
+
+app.use('/', indexRouter);
+
+app.listen(PORT, () => {
+  console.log(`Mini-Message Board app listening on port: ${PORT}`);
+});
