@@ -3,8 +3,40 @@
     <title>New Message</title>
   </head>
   <body>
-    <header>
+    <form method="POST" action="/new">
       <h1>New Message:</h1>
-    </header>
+      <p>
+        Required fields are followed by <span aria-label="required">*</span>.
+      </p>
+      <section>
+        <div>
+          <label for="authorName"
+            >Your Name: <span aria-label="required">*</span></label
+          >
+          <input
+            placeholder="Your name here"
+            type="text"
+            id="authorName"
+            name="authorName"
+            required
+          />
+        </div>
+        <div>
+          <label for="messageText"
+            >Your message: <span aria-label="required">*</span></label
+          >
+          <textarea
+            name="messageText"
+            id="messageText"
+            placeholder="Your messagee here"
+          ></textarea>
+        </div>
+      </section>
+      <section>
+        <div>
+          <button type="submit">Submit message...</button>
+        </div>
+      </section>
+    </form>
   </body>
 </html>
