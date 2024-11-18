@@ -3,6 +3,7 @@
     <title>New Message</title>
   </head>
   <body>
+    <%- include("partials/errors.ejs") %>
     <form method="POST" action="/new">
       <h1>New Message:</h1>
       <p>
@@ -11,7 +12,7 @@
       <section>
         <div>
           <label for="authorName"
-            >Your Name: <span aria-label="required">*</span></label
+            >Your Username: <span aria-label="required">*</span></label
           >
           <input
             placeholder="Your name here"
