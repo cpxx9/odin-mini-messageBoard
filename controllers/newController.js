@@ -1,15 +1,13 @@
-const { randomUUID } = require('node:crypto');
-const { messages } = require('../models/db');
+const { insertMessage } = require('../models/queries');
 
-const postMessage = (req, res) => {
+const postMessage = async (req, res) => {
   const newMessage = {
     text: req.body.messageText,
-    user: req.body.authorName,
-    added: new Date(),
-    uuid: randomUUID(),
+    username: req.body.authorName,
   };
 
-  messages.push(newMessage);
+  await insertMessage(newMessage);
+
   res.redirect('/');
 };
 
